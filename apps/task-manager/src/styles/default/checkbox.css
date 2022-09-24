@@ -1,0 +1,74 @@
+/* Customize the label for Checkbox (the container) */
+label.check-box-container {
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+label.check-box-container input[type='checkbox'] {
+  position: absolute;
+  cursor: pointer;
+  opacity: 0;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  border: calc(var(--app-checkbox-size) / 8) solid var(--app-color-border);
+  background-color: transparent;
+  border-radius: calc(var(--app-checkbox-size) / 8);
+  height: var(--app-checkbox-size);
+  width: var(--app-checkbox-size);
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+/* On mouse-over, add background color */
+label.check-box-container:hover input ~ .checkmark {
+  border-color: var(--app-color-secondary);
+}
+
+/* On mouse-over and When the checkbox is checked, add a background */
+label.check-box-container:hover input:checked ~ .checkmark {
+  background-color: var(--app-color-secondary);
+  border-color: var(--app-color-secondary);
+}
+
+/* When the checkbox is checked, add a background */
+label.check-box-container input:checked ~ .checkmark {
+  background-color: var(--app-color-primary);
+  border-color: var(--app-color-primary);
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: '';
+  display: none;
+  position: absolute;
+}
+
+/* Show the checkmark when checked */
+label.check-box-container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+label.check-box-container .checkmark:after {
+  left: calc(var(--app-checkbox-size) / 3);
+  top: calc(var(--app-checkbox-size) / 8);
+  width: calc(var(--app-checkbox-size) / 4);
+  height: calc(var(--app-checkbox-size) / 2);
+  border: solid var(--app-color-text0);
+  border-radius: calc(var(--app-checkbox-size) / 12);
+  border-width: 0 calc(var(--app-checkbox-size) / 8)
+    calc(var(--app-checkbox-size) / 8) 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}

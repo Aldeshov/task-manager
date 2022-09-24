@@ -1,0 +1,32 @@
+button,
+input[type='button'] {
+  outline: none;
+  border: none;
+  cursor: pointer;
+  user-select: none;
+  margin: 0 5px;
+  font-weight: 500;
+  padding: 10px 24px;
+  border-radius: 5px;
+  text-transform: lowercase !important;
+  color: var(--app-color-text0);
+  background-color: var(--app-color-primary);
+}
+
+button.outlined,
+input[type='button'].outlined {
+  outline: 1px solid var(--app-color-primary);
+  border: 1px solid var(--app-color-primary);
+  color: var(--app-color-primary);
+  background-color: transparent;
+}
+
+button:hover,
+input[type='button']:hover {
+  -webkit-filter: brightness(125%);
+}
+
+button:active,
+input[type='button']:active {
+  -webkit-filter: brightness(150%);
+}

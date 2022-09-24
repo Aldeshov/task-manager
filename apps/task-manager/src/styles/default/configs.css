@@ -1,0 +1,32 @@
+:root {
+  --app-font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+  --app-device-min-width-small: 576px;
+  --app-device-min-width-medium: 768px;
+  --app-device-min-width-large: 992px;
+  --app-device-min-width-large-x: 1200px;
+  --app-device-min-width-large-xx: 1400px;
+  --app-color-primary: #7367f0;
+  --app-color-secondary: #9b51e0;
+  --app-color-text0: #e0e0e0;
+  --app-color-text1: #d0d2d6;
+  --app-color-text2: #b9b9c3;
+  --app-color-text3: #b4b7bd;
+  --app-color-text4: #676d7d;
+  --app-color-border: #3b4253;
+  --app-color-success: #28c76f;
+  --app-color-warning: #ff9f43;
+  --app-color-failure: #ea5455;
+  --app-color-darkgray: #4f4f4f;
+  --app-color-highlighted: #f2c94c;
+  --app-color-background: #283046;
+  --app-color-background-dark: #161d31;
+  --app-checkbox-size: 1rem;
+}
+
+* {
+  font-family: var(--app-font-family);
+}
+
+body {
+  background-color: var(--app-color-background-dark);
+}

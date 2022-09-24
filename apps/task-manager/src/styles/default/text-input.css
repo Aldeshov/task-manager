@@ -1,0 +1,25 @@
+input {
+  padding: 7px 14px;
+  border-radius: 5px;
+  border: 1px solid var(--app-color-border);
+  color: var(--app-color-text1);
+  background-color: transparent;
+  transition: 100ms ease-in-out;
+  outline: var(--app-color-border) none;
+}
+
+input.full-width,
+button.full-width {
+  width: 100%;
+}
+
+input:focus {
+  outline-style: solid;
+  outline-color: var(--app-color-primary);
+  border-color: var(--app-color-primary);
+}
+
+input:hover {
+  border-color: var(--app-color-secondary);
+  outline-color: var(--app-color-secondary);
+}
